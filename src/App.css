@@ -9,10 +9,37 @@ body,
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #bbbfcaf5;
 }
 
 .step-title {
-    font-family: SansSerif, serif;
+    font-family: sans-serif, serif;
+}
+
+.won-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid;
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.5);
+    background-color: #d9e4dd;
+}
+
+.won-widget button {
+    padding:0.6em 2em;
+    border-radius: 8px;
+    color:#fff;
+    background-color:#495464;
+    font-size:1.1em;
+    border:0;
+    cursor:pointer;
+    margin:1em;
+}
+
+.won-widget button:hover {
+    background-color:#9ba4b4;
 }
 
 .btn-widget {
@@ -26,8 +53,13 @@ body,
     cursor: pointer;
 }
 
+.btn-widget p {
+    font-family: cursive;
+}
+
 .you-won {
     margin-right: 10px;
+    font-family: fantasy;
 }
 
 .game-container {
@@ -35,6 +67,11 @@ body,
     align-items: flex-end;
     justify-content: center;
     margin-top: 250px;
+    border: 3px solid;
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.5);
+    background-color: #d9e4dd;
 }
 
 .btn-container {
@@ -49,7 +86,8 @@ body,
 .btn {
     height: 100px;
     width: 100px;
-    border: 1px solid;
+    border: 3px solid;
     border-radius: 5px;
     margin: 3px;
+    background-color: #e8e8e8;
 }

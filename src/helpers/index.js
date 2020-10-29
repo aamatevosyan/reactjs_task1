@@ -1,5 +1,8 @@
 import {useEffect, useRef} from "react";
 
+import bloop_path from "../assets/audio/bloop.mp3";
+export const bloopAudio = new Audio(bloop_path);
+
 export const generateRenderData = (data, maxCount) => {
     const clonedData = copyArray(data);
     return clonedData.map(colors => {

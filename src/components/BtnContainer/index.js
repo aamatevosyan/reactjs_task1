@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import Btn from "../Btn";
 import {copyArray, generateRenderData, usePrevious} from "../../helpers";
 import BtnWidget from "../BtnWidget";
+import {bloopAudio} from "../../helpers/index";
 
 const BtnContainer = (props) => {
 
@@ -62,6 +63,7 @@ const BtnContainer = (props) => {
 
         if (!selectedColor) {
             clickedColorsArray.pop();
+            bloopAudio.play();
             setSelectedColor(clickedColor);
             setOriginColors(colors);
             setScore(score + 1);
@@ -70,6 +72,7 @@ const BtnContainer = (props) => {
 
         if (clickedColorsArray.length < MAX_COUNT.current && (!clickedColor || selectedColor === clickedColor)) {
             clickedColorsArray.push(selectedColor);
+            bloopAudio.play();
             setSelectedColor('');
             setOriginColors(colors);
         }
@@ -77,6 +80,7 @@ const BtnContainer = (props) => {
 
     const handleUndo = () => {
         if (score !== 0) {
+            bloopAudio.play();
             setOriginColors(prevOriginColors);
             setSelectedColor(prevSelectedColor);
             setScore(score + 1);
